@@ -20,8 +20,11 @@ yarn install
 pnpm install
 # or
 bun install
+```
 
 ## Start the development server:
+
+```bash
 npm run dev
 # or
 yarn dev
@@ -29,19 +32,21 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
 
- ## Accessing the App
+## Accessing the App
+
 Open your web browser and visit http://localhost:3000 to access the PDF Chat App.
 You can start editing the application by modifying the app/page.tsx file. The page will auto-update as you make changes, allowing you to see your modifications in real-time.
 
 This project also utilizes next/font to automatically optimize and load the Inter font, a custom Google Font, for a visually pleasing user experience.
 
 # Features
+
 1. The PDF Chat App comes with the following features:
 
-3. Chat with PDFs: Users can upload PDF documents and chat with others who are viewing the same document in real-time.
+2. Chat with PDFs: Users can upload PDF documents and chat with others who are viewing the same document in real-time.
 
 3. Real-time Updates: Changes and comments made by users are updated in real-time for all participants.
 
 Collaboration: Users can collaborate on PDFs, making it ideal for team discussions, online classes, and group projects.# chat-with-pdf
-```
