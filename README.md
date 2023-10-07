@@ -1,6 +1,6 @@
 # PDF Chat App
 
-The PDF Chat App is a [Next.js](https://nextjs.org/) project that allows users to chat with their PDF documents. This application leverages the power of Next.js to create a seamless and interactive experience for users who want to collaborate and communicate within PDF files.
+The PDF Chat App is a [Next.js](https://nextjs.org/) project that allows users to chat with their PDF documents. This application leverages the power of Next.js, GPT models to create a seamless and interactive experience for users who want to collaborate and communicate within PDF files.
 
 ## Getting Started
 
@@ -36,17 +36,29 @@ bun dev
 
 ## Accessing the App
 
-Open your web browser and visit http://localhost:3000 to access the PDF Chat App.
-You can start editing the application by modifying the app/page.tsx file. The page will auto-update as you make changes, allowing you to see your modifications in real-time.
-
-This project also utilizes next/font to automatically optimize and load the Inter font, a custom Google Font, for a visually pleasing user experience.
+You can start interacting with PDFs by uploading them and asking questions related to the content. The application's intelligent engine will analyze the PDF and provide answers to your questions.
 
 # Features
 
-1. The PDF Chat App comes with the following features:
+1. ### Upload PDFs:
 
-2. Chat with PDFs: Users can upload PDF documents and chat with others who are viewing the same document in real-time.
+   Users can easily upload PDF documents to the application.
 
-3. Real-time Updates: Changes and comments made by users are updated in real-time for all participants.
+2. ### Intelligent PDF Analysis:
 
-Collaboration: Users can collaborate on PDFs, making it ideal for team discussions, online classes, and group projects.# chat-with-pdf
+   The application's engine understands the content of the PDF and can answer questions asked by the user, making it a powerful tool for extracting information.
+
+3. ### Natural Language Processing:
+
+   Users can have a natural conversation with the application, allowing for flexible and intuitive interactions.
+
+4. ### Real-time Collaboration:
+
+   Multiple users can collaborate on the same PDF document and engage in discussions related to the content.
+
+5. ### Search Functionality:
+
+   Users can search for specific keywords or topics within the PDF documents, and the application will provide relevant information.
+
+6. ### Accessibility:
+   The PDF Chat App is designed with accessibility in mind, ensuring that it can be used by a wide range of users.
