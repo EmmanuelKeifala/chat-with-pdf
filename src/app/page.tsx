@@ -18,7 +18,7 @@ export default async function Home() {
             {isAuth && <Button>Go to Chats</Button>}
           </div>
           <p className="max-w-xl mt-1 text-lg text-slate-600">
-            Join bunch of student, researchers and professionals to better
+            Join bunch of students, researchers and professionals to better
             understand your pdfs with AI
           </p>
           <div className="w-full mt-4">
