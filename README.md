@@ -44,3 +44,4 @@ This project also utilizes next/font to automatically optimize and load the Inte
 3. Real-time Updates: Changes and comments made by users are updated in real-time for all participants.
 
 Collaboration: Users can collaborate on PDFs, making it ideal for team discussions, online classes, and group projects.# chat-with-pdf
+```
