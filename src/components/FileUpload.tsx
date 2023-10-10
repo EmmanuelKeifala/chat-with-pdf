@@ -7,7 +7,15 @@ import {useDropzone} from 'react-dropzone';
 import {Progress} from '@/components/ui/progress';
 import {useToast} from './ui/use-toast';
 import {useUploadThing} from '@/lib/uploadThing';
+import {useMutation} from '@tanstack/react-query';
 const FileUpload = () => {
+  const {mutate, isLoading} = useMutation({
+    mutationFn: async ({fileKey, fileName}: any) => {
+      const reponse = axios.post('/api/create-chat', {fileKey, fileName});
+
+      return (await reponse)?.data;
+    },
+  });
   const [isUploading, setIsUploading] = useState<boolean>(true);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
 
@@ -32,7 +40,6 @@ const FileUpload = () => {
       }
 
       const [fileResponse] = res;
-      console.log(fileResponse);
       const key = fileResponse?.key;
       if (!key) {
         return toast({
@@ -41,6 +48,23 @@ const FileUpload = () => {
           variant: 'destructive',
         });
       }
+      mutate(fileResponse, {
+        onSuccess: data => {
+          toast({
+            title: 'Chat Created',
+            description: 'Your file was uploaded successfully',
+            variant: 'default',
+          });
+        },
+        onError: (error: any) => {
+          console.log(error);
+          toast({
+            title: 'Error creating chat',
+            description: error.message,
+            variant: 'destructive',
+          });
+        },
+      });
 
       clearInterval(progessInterval);
       setUploadProgress(100);
