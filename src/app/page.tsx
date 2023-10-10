@@ -3,8 +3,9 @@ import {UserButton} from '@clerk/clerk-react';
 import {auth} from '@clerk/nextjs';
 import Link from 'next/link';
 import {LogIn} from 'lucide-react';
+import FileUpload from '@/components/FileUpload';
 export default async function Home() {
-  const {userId} = await auth();
+  const {userId} = auth();
   const isAuth = !!userId;
   return (
     <div className="w-screen min-h-screen bg-gradient-to-r from-blue-100 to-rose-100">
@@ -23,7 +24,7 @@ export default async function Home() {
           </p>
           <div className="w-full mt-4">
             {isAuth ? (
-              <h1>File Upload</h1>
+              <FileUpload />
             ) : (
               <Link href={'/sign-in'}>
                 <Button>
