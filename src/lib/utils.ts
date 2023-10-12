@@ -64,3 +64,9 @@ export async function reducePdfSize(inputPdfPath: any) {
     }
   });
 }
+
+export const convertToAscii = (str: string) => {
+  // remove non ascii characters
+  const asciiString = str.replace(/[^\x00-\x7F]/g, '');
+  return asciiString;
+};

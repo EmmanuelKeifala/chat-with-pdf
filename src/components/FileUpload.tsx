@@ -8,7 +8,9 @@ import {Progress} from '@/components/ui/progress';
 import {useToast} from './ui/use-toast';
 import {useUploadThing} from '@/lib/uploadThing';
 import {useMutation} from '@tanstack/react-query';
+import {useRouter} from 'next/navigation';
 const FileUpload = () => {
+  const router = useRouter();
   const {mutate, isLoading} = useMutation({
     mutationFn: async ({fileKey, fileName}: any) => {
       const reponse = axios.post('/api/create-chat', {fileKey, fileName});
@@ -49,12 +51,13 @@ const FileUpload = () => {
         });
       }
       mutate(fileResponse, {
-        onSuccess: data => {
+        onSuccess: ({chat_id}) => {
           toast({
             title: 'Chat Created',
             description: 'Your file was uploaded successfully',
             variant: 'default',
           });
+          router.push(`/chat/${chat_id}`);
         },
         onError: (error: any) => {
           console.log(error);
